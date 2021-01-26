@@ -23,6 +23,7 @@ class App extends Component {
           />
           <button
             onClick={() => this.addItem()}></button>
+            Add
         </div>
 
       </div>
