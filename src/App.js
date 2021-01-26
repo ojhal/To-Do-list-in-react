@@ -9,6 +9,13 @@ class App extends Component {
     }
 
   }
+
+  addItem() {
+    const newItem = {
+      id: 1 + Math.random(),
+      value: this.state.newItem.slice()
+    };
+  }
   render() {
     return (
       <div className="App">
