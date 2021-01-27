@@ -7,9 +7,13 @@ class App extends Component {
       newItem: "",
       list: []
     }
-
   }
 
+  updateInput(key, value) {
+    this.setState({
+      [key]: value
+    })
+  }
   addItem() {
     const newItem = {
       id: 1 + Math.random(),
@@ -17,6 +21,13 @@ class App extends Component {
     };
 
     const list = [...this.state.list];
+
+    list.push(newItem);
+
+    this.setState({
+      list,
+      newItem: ""
+    });
   }
   render() {
     return (
