@@ -15,6 +15,8 @@ class App extends Component {
       id: 1 + Math.random(),
       value: this.state.newItem.slice()
     };
+
+    const list = [...this.state.list];
   }
   render() {
     return (
