@@ -29,21 +29,43 @@ class App extends Component {
       newItem: ""
     });
   }
+  deleteItem(id) {
+    const list = [...this.state.list];
+
+    const updateList = list.filter(item => item.id !== id);
+
+
+    this.setState({ list: updated });
+
+  }
   render() {
     return (
       <div className="App">
         <div>
-          Add an Item...
+
+          <li>Task1</li>
+          <li>Task2</li>
+          <li>Task3</li>
+
           <br />
           <input
             type="text"
-            placeholder="Type item here.."
+            placeholder="Enter item"
             value={this.state.newItem}
             onChange={e => this.updateInput("newItem", e.target.value)}
           />
-          <button
-            onClick={() => this.addItem()}></button>
-            Add
+          <button onClick={() => this.addItem()}>Submit</button>
+          <br />
+          <ul>
+            {this.state.list.map(item => {
+              return (
+                <li key={item.id}>
+                  {item.value}
+                  <button>onClick={() => this.deleteItem(item.id)}x</button>
+                </li>
+              )
+            })}
+          </ul>
         </div>
 
       </div>
