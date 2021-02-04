@@ -32,10 +32,10 @@ class App extends Component {
   deleteItem(id) {
     const list = [...this.state.list];
 
-    const updateList = list.filter(item => item.id !== id);
+    const updatedList = list.filter(item => item.id !== id);
 
 
-    this.setState({ list: updated });
+    this.setState({ list: updatedList });
 
   }
   render() {
@@ -61,7 +61,8 @@ class App extends Component {
               return (
                 <li key={item.id}>
                   {item.value}
-                  <button>onClick={() => this.deleteItem(item.id)}x</button>
+                  <button
+                    onClick={() => this.deleteItem(item.id)}>x</button>
                 </li>
               )
             })}
