@@ -1,16 +1,36 @@
-body {
-  background-color: grey;
-  color: black;
-  padding: 40px;
-  font-family: Arial;
-  text-align: center;
-  border-radius: 0%;
+@media screen and (min-width: 480px) {
+  body {
+    background-color: whitesmoke;
+    color: black;
+    padding: 40px;
+    font-family: Arial;
+    text-align: center;
+    border-radius: 0%;
+  }
 }
 
 .App {
-  color: beige;
-  background-color: lightsteelblue;
+  color: black;
+  background-color: gray;
   font-family: Arial, Helvetica, sans-serif;
   font-size: inherit;
   padding: 40px;
+
+}
+
+
+li {
+  background: lightgray;
+  margin: 2px;
+  padding: 10px;
+
+}
+
+ul li {
+
+  background: blueviolet;
+  margin: 2px;
+  padding: 5px;
+
+
 }
