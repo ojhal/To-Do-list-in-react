@@ -1,7 +1,8 @@
 @media screen and (min-width: 480px) {
+
+
   body {
-    background-color: whitesmoke;
-    color: black;
+    background-color: #f9f8fa;
     padding: 40px;
     font-family: Arial;
     text-align: center;
@@ -10,27 +11,34 @@
 }
 
 .App {
-  color: black;
-  background-color: gray;
+  color: gray;
+  background-color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-size: inherit;
   padding: 40px;
+  text-align: left;
+
 
 }
 
 
-li {
-  background: lightgray;
-  margin: 2px;
-  padding: 10px;
 
+
+div.App {
+  width: 284px;
+  padding: 10px 10px 20px 10px;
+  border: 1px #BFBFBF;
+  background-color: white;
+  box-shadow: 10px 10px 5px #aaaaaa;
 }
 
-ul li {
+h1 {
+  color: black;
+  text-align: left;
+}
 
-  background: blueviolet;
-  margin: 2px;
-  padding: 5px;
 
-
+div button {
+  float: right;
+  margin-left: -50%;
 }

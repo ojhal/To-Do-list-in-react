@@ -41,15 +41,17 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1 className="app-title">You have 3 Todos</h1>
+
 
         <div className="App">
           <div>
+            <h1 className="app-title">You have 3 Todos</h1>
 
-            <li>Task1</li>
-            <li>Task2</li>
-            <li>Task3</li>
-
+            Task 1<button>x</button>
+            <br />
+            Task 2<button>x</button>
+            <br />
+            Task 3<button>x</button>
             <br />
             <input
               type="text"
@@ -59,17 +61,16 @@ class App extends Component {
             />
             <button onClick={() => this.addItem()}>Submit</button>
             <br />
-            <ul>
-              {this.state.list.map(item => {
-                return (
-                  <li key={item.id}>
-                    {item.value}
-                    <button
-                      onClick={() => this.deleteItem(item.id)}>x</button>
-                  </li>
-                )
-              })}
-            </ul>
+            {this.state.list.map(item => {
+              return (
+                <li key={item.id}>
+                  {item.value}
+                  <button
+                    onClick={() => this.deleteItem(item.id)}>x</button>
+                </li>
+              )
+            })}
+
           </div>
 
         </div>
