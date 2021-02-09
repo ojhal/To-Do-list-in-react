@@ -45,13 +45,13 @@ class App extends Component {
 
         <div className="App">
           <div>
-            <h1 className="app-title">You have 3 Todos</h1>
+            <h2 className="app-title">You have 3 Todos</h2>
 
-            Task 1<button>x</button>
+            <h3>task 1<button className="button button1">x</button></h3>
             <br />
-            Task 2<button>x</button>
+            <h3>task 2<button className="button button1">x</button></h3>
             <br />
-            Task 3<button>x</button>
+            <h3>task 3<button className="button button1">x</button></h3>
             <br />
             <input
               type="text"
@@ -59,7 +59,7 @@ class App extends Component {
               value={this.state.newItem}
               onChange={e => this.updateInput("newItem", e.target.value)}
             />
-            <button onClick={() => this.addItem()}>Submit</button>
+            <button className="button button2" onClick={() => this.addItem()}>Submit</button>
             <br />
             {this.state.list.map(item => {
               return (

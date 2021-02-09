@@ -3,10 +3,11 @@
 
   body {
     background-color: #f9f8fa;
-    padding: 40px;
+    padding: 110px;
     font-family: Arial;
-    text-align: center;
-    border-radius: 0%;
+    text-align: right;
+
+
   }
 }
 
@@ -15,9 +16,7 @@
   background-color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-size: inherit;
-  padding: 40px;
   text-align: left;
-
 
 }
 
@@ -26,19 +25,65 @@
 
 div.App {
   width: 284px;
-  padding: 10px 10px 20px 10px;
+  padding: 8px;
   border: 1px #BFBFBF;
   background-color: white;
-  box-shadow: 10px 10px 5px #aaaaaa;
+  box-shadow: 0 8px 6px -6px black;
+  font-size: small;
+
 }
 
-h1 {
+h2 {
   color: black;
-  text-align: left;
+  text-align: center;
+  width: 274px;
+  padding: 10px 10px 10px 10px;
+  border: 5px #BFBFBF;
+  background-color: white;
+  box-shadow: 0 2px 6px -6px black;
+
+
+
 }
+
 
 
 div button {
   float: right;
   margin-left: -50%;
+
+
+}
+
+input {
+  width: 65%;
+  padding: 5px 5px;
+  margin: 1px 2px;
+  display: inline-block;
+  font-size: small;
+
+
+
+}
+
+.button1 {
+  border: none;
+  border-radius: 80%;
+  color: gray;
+}
+
+.button2 {
+  cursor: pointer;
+  width: 25%;
+  padding: 5px 5px;
+  margin: 1px 2px;
+  display: inline-block;
+
+}
+
+h3 {
+  border-bottom: 1px solid lightgray;
+  border-bottom-width: thin;
+  border-spacing: 255px;
+  margin: -1%;
 }
