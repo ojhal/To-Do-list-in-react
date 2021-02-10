@@ -45,14 +45,8 @@ class App extends Component {
 
         <div className="App">
           <div>
-            <h2 className="app-title">You have 3 Todos</h2>
+            <h3>You have 3 Todos</h3>
 
-            <h3>task 1<button className="button button1">x</button></h3>
-            <br />
-            <h3>task 2<button className="button button1">x</button></h3>
-            <br />
-            <h3>task 3<button className="button button1">x</button></h3>
-            <br />
             <input
               type="text"
               placeholder="Enter item"
@@ -60,14 +54,13 @@ class App extends Component {
               onChange={e => this.updateInput("newItem", e.target.value)}
             />
             <button className="button button2" onClick={() => this.addItem()}>Submit</button>
-            <br />
             {this.state.list.map(item => {
               return (
-                <li key={item.id}>
+                <h4 key={item.id}>
                   {item.value}
-                  <button
+                  <button className="button button1"
                     onClick={() => this.deleteItem(item.id)}>x</button>
-                </li>
+                </h4>
               )
             })}
 
