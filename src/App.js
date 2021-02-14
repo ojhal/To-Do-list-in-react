@@ -44,7 +44,8 @@ class App extends Component {
 
 
         <div className="App">
-          <div>
+          <h3>You have 3 Todos</h3>
+          {/* <div>
             <h3>You have 3 Todos</h3>
 
             <input
@@ -52,17 +53,28 @@ class App extends Component {
               placeholder="Enter item"
               value={this.state.newItem}
               onChange={e => this.updateInput("newItem", e.target.value)}
+            /> */}
+          {/* <button className="button button2" onClick={() => this.addItem()}>Submit</button> */}
+          {this.state.list.map(item => {
+            return (
+              <h4 key={item.id}>
+                {item.value}
+                <button className="button button1"
+                  onClick={() => this.deleteItem(item.id)}>x</button>
+              </h4>
+            )
+          })}
+          <div>
+
+            <input
+              type="text"
+              placeholder="Enter item"
+              value={this.state.newItem}
+              onChange={e => this.updateInput("newItem", e.target.value)}
+
             />
+
             <button className="button button2" onClick={() => this.addItem()}>Submit</button>
-            {this.state.list.map(item => {
-              return (
-                <h4 key={item.id}>
-                  {item.value}
-                  <button className="button button1"
-                    onClick={() => this.deleteItem(item.id)}>x</button>
-                </h4>
-              )
-            })}
 
           </div>
 
