@@ -5,7 +5,8 @@ class App extends Component {
     super(props);
     this.state = {
       newItem: "",
-      list: []
+      list: [],
+      black: true
     }
   }
 
@@ -29,6 +30,12 @@ class App extends Component {
       newItem: ""
     });
   }
+
+  changeColor = () => {
+    this.setState({ black: !this.state.black })
+  }
+
+
   deleteItem(id) {
     const list = [...this.state.list];
 
@@ -39,6 +46,7 @@ class App extends Component {
 
   }
   render() {
+    let btn_class = this.state.black ? "black" : "white";
     return (
       <div>
 
@@ -61,6 +69,10 @@ class App extends Component {
                 {item.value}
                 <button className="button button1"
                   onClick={() => this.deleteItem(item.id)}>x</button>
+                <button className={btn_class}
+                  onClick={this.changeColor}>+</button>
+
+
               </h4>
             )
           })}
@@ -79,7 +91,7 @@ class App extends Component {
           </div>
 
         </div>
-      </div>
+      </div >
 
     )
   }
