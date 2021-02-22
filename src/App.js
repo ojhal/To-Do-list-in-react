@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 
+// import Counter from "./Counter";
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       newItem: "",
       list: [],
-      black: true
+      bgcolor: true
     }
   }
 
@@ -32,7 +34,7 @@ class App extends Component {
   }
 
   changeColor = () => {
-    this.setState({ black: !this.state.black })
+    this.setState({ bgcolor: !this.state.bgcolor })
   }
 
 
@@ -46,7 +48,7 @@ class App extends Component {
 
   }
   render() {
-    let btn_class = this.state.black ? "black" : "white";
+    let btn_class = this.state.bgcolor ? "black" : "white";
     return (
       <div>
 
@@ -87,7 +89,7 @@ class App extends Component {
             />
 
             <button className="button button2" onClick={() => this.addItem()}>Submit</button>
-
+            {/* <Counter /> */}
           </div>
 
         </div>
